@@ -49,9 +49,9 @@ def methodology():
 def predict():
 
     #check login status
-    if 'user_id' not in session:
-        flash('Please log in to access the prediction feature.', 'warning')
-        return redirect(url_for('login'))
+    # if 'user_id' not in session:
+    #     flash('Please log in to access the prediction feature.', 'warning')
+    #     return redirect(url_for('login'))
     
     prediction_text = None
 
@@ -239,4 +239,4 @@ def register():
     return render_template('register.html')
 
 if __name__=='__main__':
-    app.run(debug=True, port=4000) #if you want to change the port number you can do it here
+    app.run(debug=True, port=4000,host='0.0.0.0') #if you want to change the port number you can do it here
